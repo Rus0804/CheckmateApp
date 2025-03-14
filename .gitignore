@@ -117,3 +117,22 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+# Flutter build files
+build/
+windows/build/
+android/.gradle/
+ios/Pods/
+
+# Dart specific
+.dart_tool/
+.packages
+pubspec.lock
+
+# IDE files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+*.iml
