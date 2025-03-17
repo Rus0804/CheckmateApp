@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         darkTheme: ThemeData.dark(),
         themeMode: ThemeMode.dark,
-        title: "hey",
+        title: "Chess26",
         home: Scaffold(
           appBar: AppBar(
             title: const Text("Checkmate Website"),
