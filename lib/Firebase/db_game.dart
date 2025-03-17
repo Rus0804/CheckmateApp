@@ -99,8 +99,10 @@ class FirebaseGame {
     var gameDB = await db.collection("games").doc(gID).get();
     if (winner == "white") {
       gameDB.reference.update({"winner": gameDB.data()?['Player1']});
-    } else {
+    } else if (winner == "black") {
       gameDB.reference.update({"winner": gameDB.data()?['Player2']});
+    } else {
+      gameDB.reference.update({"winner": "Draw"});
     }
     await endGame(gameDB.data()?['Player1'], gID);
     await endGame(gameDB.data()?['Player2'], gID);
