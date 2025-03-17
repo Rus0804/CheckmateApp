@@ -137,5 +137,22 @@ pubspec.lock
 .DS_Store
 *.iml
 
+#remove everything irrelevant 
+android/
+.firebase/
+.github/
+ios/
+linux/
+macos/
+test/
+web/
+windows/
+.firebaserc
+.metadata
+analysis_options.yaml
+apphosting.yaml
+devtools_options.yaml
+firebase.json
+
 # Firebase options
 lib/Firebase/firebase_options.dart
