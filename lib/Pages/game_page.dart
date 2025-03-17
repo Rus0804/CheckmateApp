@@ -154,10 +154,14 @@ class _MultiplayerState extends State<Multiplayer> {
                       (chess.turn.toString() == 'COLOR.white')
                           ? "Black"
                           : "White";
+                  if (chess.in_draw) {
+                    winner = 'None';
+                  }
                   FirebaseGame.setWinner(gID, winner);
                   return AlertDialog(
                     title: Text("Game Over"),
-                    content: Text("$winner won"),
+                    content:
+                        winner == 'None' ? Text("Draw") : Text("$winner won"),
                     actions: [
                       TextButton(
                         onPressed: () {
