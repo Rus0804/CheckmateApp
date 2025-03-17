@@ -1,0 +1,31 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "checkmateclub26",
+          "appId": "1:527987339209:android:d47cd01a8dd3b3443c4218",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "checkmateclub26",
+          "configurations": {
+            "android": "1:527987339209:android:d47cd01a8dd3b3443c4218",
+            "web": "1:527987339209:web:82a21248b24897203c4218",
+            "windows": "1:527987339209:web:e2adc50883b30e273c4218"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

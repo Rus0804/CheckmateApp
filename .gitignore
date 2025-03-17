@@ -136,3 +136,6 @@ pubspec.lock
 # System files
 .DS_Store
 *.iml
+
+# Firebase options
+lib/Firebase/firebase_options.dart
