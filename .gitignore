@@ -155,8 +155,4 @@ devtools_options.yaml
 firebase.json
 
 # Firebase options
-<<<<<<< HEAD
 lib/Firebase/firebase_options.dart
-=======
-lib/Firebase/firebase_options.dart
->>>>>>> 412e97079a4e2bc03662c07a2b2be9c4058038d7
