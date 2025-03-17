@@ -139,7 +139,24 @@ class _GameState extends State<Game> {
                               (chess.turn.toString() == 'COLOR.white')
                                   ? "Black"
                                   : "White";
-                          return AlertDialog(content: Text("$winner won"));
+                          if (chess.in_draw) {
+                            winner = 'None';
+                          }
+                          return AlertDialog(
+                            title: Text("Game Over"),
+                            content:
+                                winner == 'None'
+                                    ? Text("Draw")
+                                    : Text("$winner won"),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop(); // Close dialog
+                                },
+                                child: Text("OK"),
+                              ),
+                            ],
+                          );
                         },
                       );
                     }
