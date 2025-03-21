@@ -19,6 +19,7 @@ class _MultiplayerState extends State<Multiplayer> {
   late String gID;
   var boardState;
   bool shownDialog = false;
+  bool resigned = false;
 
   c.Chess chess = c.Chess();
 
@@ -180,11 +181,11 @@ class _MultiplayerState extends State<Multiplayer> {
         return Column(
           children: [
             SizedBox(
-              height: 620,
+              height: 580,
               width: 660,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  childAspectRatio: 1.1,
+                  childAspectRatio: 1.2,
                   crossAxisCount: 8,
                 ),
                 itemCount: 64,
@@ -218,8 +219,6 @@ class _MultiplayerState extends State<Multiplayer> {
                       }
                     },
                     child: Container(
-                      width: 20,
-                      height: 20,
                       color:
                           black == userState.id
                               ? (selectedSquare == 63 - index
@@ -233,6 +232,13 @@ class _MultiplayerState extends State<Multiplayer> {
                   );
                 },
               ),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                String winner = (black == userState.id) ? 'white' : 'black';
+                FirebaseGame.setWinner(gID, winner);
+              },
+              child: Text('Resign'),
             ),
           ],
         );
