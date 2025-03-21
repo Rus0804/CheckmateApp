@@ -14,25 +14,21 @@ A chess app with social features and simple tournaments. You can add friends and
 
 - Login
 
-![image.png](attachment:6106ce58-29b7-4be7-8616-0e77fc19d2d2:image.png)
+
+![Screenshot (21)](https://github.com/user-attachments/assets/ea84b6cb-cf0b-4a12-a4f8-04df11ee614d)
 
 - Profile Page
 
-![image.png](attachment:f449e7ff-224e-4014-a6c6-5274c4a0d7b7:image.png)
+![Screenshot (23)](https://github.com/user-attachments/assets/718e22f0-1a78-490a-81c9-4fbee0aadb9b)
 
 - Home Page
 
-![image.png](attachment:d1b55384-89da-47b0-855e-dacfe59b2f68:image.png)
+![Screenshot (22)](https://github.com/user-attachments/assets/bd96a465-fc8d-4c20-af18-42747ddcf4d4)
+
 
 - Socials Page
 
-![image.png](attachment:77bd50d2-e705-4006-9442-298c77c2de11:image.png)
-
-- Multiplayer game page
-
-![image.png](attachment:ead849e7-37e9-495a-b4c4-66d8338ce48a:image.png)
-
----
+![Screenshot (24)](https://github.com/user-attachments/assets/6dce89e3-7d8b-4350-b74f-ac7a4a16b345)
 
 ##
 
