@@ -53,6 +53,10 @@ class FirebaseService {
       "isPlaying": [],
       "SentGameReq": [],
       "RecievedGameReq": [],
+      "History": [],
+      "Wins": 0,
+      "Loses": 0,
+      "Draws": 0,
     });
     db.collection("users").add(userDoc);
   }

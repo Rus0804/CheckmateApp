@@ -99,19 +99,31 @@ class FirebaseGame {
     var gameDB = await db.collection("games").doc(gID).get();
     if (winner == "white") {
       gameDB.reference.update({"winner": gameDB.data()?['Player1']});
+      winner = gameDB.data()?['Player1'];
     } else if (winner == "black") {
       gameDB.reference.update({"winner": gameDB.data()?['Player2']});
+      winner = gameDB.data()?['Player2'];
     } else {
       gameDB.reference.update({"winner": "Draw"});
     }
-    await endGame(gameDB.data()?['Player1'], gID);
-    await endGame(gameDB.data()?['Player2'], gID);
+    await endGame(gameDB.data()?['Player1'], gID, winner);
+    await endGame(gameDB.data()?['Player2'], gID, winner);
   }
 
-  static Future<void> endGame(String pID, String gID) async {
+  static Future<void> endGame(String pID, String gID, String won) async {
     var userDB = await db.collection("users").doc(pID).get();
+    String field;
+    if (pID == won) {
+      field = "Wins";
+    } else if (won == "None") {
+      field = 'Draws';
+    } else {
+      field = "Loses";
+    }
     userDB.reference.update({
       "isPlaying": FieldValue.arrayRemove([gID]),
+      "History": FieldValue.arrayUnion([gID]),
+      field: FieldValue.increment(1),
     });
   }
 }
